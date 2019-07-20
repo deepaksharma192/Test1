@@ -1,6 +1,12 @@
 .hader_top{
   position: relative;
 }
+#DataBox{
+  position: absolute;
+z-index: 999;
+right: 6px;
+display: none;
+}
 .hader_top img{
   width: 100%;
 }
