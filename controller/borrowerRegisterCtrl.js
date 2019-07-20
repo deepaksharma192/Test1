@@ -1,6 +1,11 @@
 app.controller("borrowerRegisterCtrl", function ($scope) {
-
+  $scope.DatePicker = false;		
   $scope.show_verify = false;
+  $scope.popup2 = {
+    opened: false
+  };
+
+
   $scope.formData =
   {
 	first_name:"",
@@ -19,6 +24,9 @@ app.controller("borrowerRegisterCtrl", function ($scope) {
 	},
 	is_terms_of_privacy_policy:""		  
   }
+    $scope.open2 = function() {
+    $scope.popup2.opened = true;
+  };
   $scope.validateEntryOfDetail = function($event){
   	var str = $($event.target).val();
   	var patt = new RegExp("^[a-zA-Z0-9]+[a-zA-Z0-9._]+@[a-zA-Z0-9_-]+\.[a-zA-Z]{2,5}$");
@@ -27,6 +35,9 @@ app.controller("borrowerRegisterCtrl", function ($scope) {
 		console.log("validateEntryOfDetail")
 	}
   }
+  $scope.OpenDatePicker = function () {
+  	$scope.DatePicker = true;
+};
   $scope.sendOtp = function () {
         if ($scope.formData && $scope.formData.mobile) {
    			 $scope.show_verify = true;
