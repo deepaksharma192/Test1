@@ -1,0 +1,352 @@
+.hader_top{
+  position: relative;
+}
+.hader_top img{
+  width: 100%;
+}
+.banner_img img{
+    width: 100%;
+}
+.banner_img{
+  padding-bottom: 40px;
+}
+.pd_t30{
+  padding-top: 30px;
+}
+.services{
+  text-align: center;
+  padding: 0 15px;
+}
+.services img{
+  width: 35%;
+  margin-top: 20px;
+} 
+
+.services h4{
+  color: #ff5000;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+} 
+.services p{
+  color: #404041;
+  font-size: 14px;
+  text-align: justify;
+  font-weight: normal;
+} 
+
+.register-box{
+  background: #f4f4f6;
+}
+.register-box .m0_hading {
+    background: #ff5000;
+    font-size: 22px;
+    line-height: 58px;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px 15px;
+    border-bottom: solid 1px #8c3d11;
+}
+.register-box .form-control {
+    border: none;
+    border-bottom: solid 1px #231F20;
+    border-radius: 0;
+    margin: 0;
+    color: #231F20;
+    background: none;
+        box-shadow: none;
+    font-size: 12px;
+    padding: 0;
+}
+.borrower-register-input{
+  padding: 0 10px;
+}
+ .register-box .form-control::placeholder{
+  color: #231F20;
+ }
+
+.register-box .input_radiobtn label{
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+ }
+ .register-box .form-group{
+  margin-bottom: 5px;
+
+}
+ .register-box .input_radiobtn .checkbox,
+ .register-box .input_radiobtn .radio{
+  margin: 0;
+ } 
+ .lablerow{
+  display: flex;
+  } 
+    .lablerow>* {
+            width: 100%;
+    margin-right: 19px;
+    }
+
+
+.lablerow2{
+  display: flex;
+  } 
+    .lablerow2>* {
+            width: 100%;
+    margin-right: 19px;
+    }
+    .lablerow2 label:nth-of-type(1) {
+            width: 230%;
+    }
+
+   
+  
+.datetimeicon {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 3px;
+}
+  .datetimeicon img{
+    width: 100%;
+  }
+.register-box .form-group .tick_set {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    display: inline-block;
+    background: url(../images/tik.png)no-repeat;
+    background-size: 100%;
+    right: 20px;
+    top: 12px;
+}
+
+
+     .form-group label input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background: url(../images/dotid.png) no-repeat;
+        background-position: -28px -1px;
+        background-size: 50px;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        /* border: 1px solid #231F20; */
+    }
+
+      .form-group label input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+         background: url(../images/dotid.png) no-repeat;
+         background-position:-4px -1px;
+        background-size: 50px;
+        content: '';
+        display: inline-block;
+        visibility: visible; 
+    }
+
+.form-group label input[type='checkbox']:after {
+    width: 17px;
+    height: 17px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background: url(../images/dotid.png) no-repeat;
+    background-position: -26px -24px;
+    background-size: 50px;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    /* border: 1px solid #231F20; */
+}
+
+      .form-group label input[type='checkbox']:checked:after {
+        width: 17px;
+        height: 17px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+         background: url(../images/dotid.png) no-repeat;
+         background-position:-4px -24px;
+        background-size: 50px;
+        content: '';
+        display: inline-block;
+        visibility: visible; 
+    }
+
+  .register-box .terms span{
+font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+ }
+ .register-box .terms label{
+padding-left: 20px;
+ }
+ .btn.btn-orange {
+    background-color: #ea672d;
+}
+.register-box .btn.btn-orange {
+    border-radius: 0;
+    padding: 4px 25px;
+    color: #fff;
+}
+.register-box .info {
+      margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* new page */
+
+.register-box_2 .btn.btn-orange {
+    border-radius: 0;
+    padding: 4px 25px;
+    color: #fff;
+}
+.register-box_2 .info {
+      margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.register-box_2 .m1_hading {
+    background: none;
+    font-size: 28px;
+    line-height: 58px;
+    color: #000;
+    font-weight: normal;
+    text-align: center;
+    padding: 10px 15px; 
+}
+
+.register-box_2 .form-control {
+    border: none;
+    border: solid 1px #231F20;
+    border-radius: 0;
+    margin: 0;
+    color: #231F20;
+    background: none;
+    box-shadow: none;
+    height: 40px;
+    font-size: 12px;
+    padding: 0 25px;
+}
+.register-box_2 .labletext {
+    position: absolute;
+    font-weight: normal;
+    background: #fff;
+    padding: 0 10px;
+    left: 32px;
+    top: -8px;
+    font-size: 12px;
+}
+.register-box_2 .form-control::placeholder{
+  /* color: #231F20; */
+  font-style: italic;
+ }
+
+ 
+.register-box_2 .input_radiobtn label{
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+ }
+.register-box_2 .form-group{
+  margin-bottom: 25px;
+
+}
+ .register-box_2 .input_radiobtn .checkbox,
+ .register-box_2 .input_radiobtn .radio{
+  margin: 0;
+ } 
+.register-box_2 .form-control.selectarrow {
+    background: url(../images/arrow.png) no-repeat;
+    background-size: 12px;
+    background-position: 96% 50%;
+}
+ select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.hadding03 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 15px;
+    margin-top: -10px;
+}
+
+
+
+
+/* result page */
+
+
+
+
+.text_1 p{
+          font-size: 30px;
+          font-weight: 500;
+          padding-bottom: 17px;
+          }
+
+.text_1 b{
+
+          font-size: 30px;
+        }
+
+
+
+.text_1 h1{
+           font-size: 36px;
+           padding: 69px 0 30px 0px;
+           font-weight: 700;
+         }
+
+.botm-text p{
+            font-weight: 700;
+            }
+
+
+.btnn {
+  padding: 4px 25px;
+  font-size: 14px;
+  text-align: center;
+
+  outline: none;
+  color: #fff;
+  background-color: #ea672d;
+  border: none;
+  border-radius: 4px;
+
+  margin-top: 12em;
+
+}
+
+
+.btnn:hover{
+
+          color: #000;
+}
+
+.btnn:active {
+  background-color: #3e8e41;
+
