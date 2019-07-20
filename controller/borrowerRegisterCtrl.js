@@ -4,7 +4,7 @@ app.controller("borrowerRegisterCtrl", function ($scope) {
   $scope.popup2 = {
     opened: false
   };
-
+$scope.Salaried=true;
 
   $scope.formData =
   {
@@ -17,10 +17,10 @@ app.controller("borrowerRegisterCtrl", function ($scope) {
 	partner_referral_id:"",
 	personal_detail:{
 		pincode:"",
-		employment_type:"",
-		mode_of_salary:"",
-		mode_of_salary_aadhar:"",
-		mode_of_salary_ITR:""
+		employment_type:"SALARIED",
+		mode_of_salary:"CHEQUE_OR_ONLINE_TRANSFER",
+		mode_of_salary_aadhar:"no",
+		mode_of_salary_ITR:"no"
 	},
 	is_terms_of_privacy_policy:""		  
   }
@@ -43,7 +43,7 @@ app.controller("borrowerRegisterCtrl", function ($scope) {
    			 $scope.show_verify = true;
         }
     };
-  $scope.registerFn = function(){
+  $scope.register = function(){
   	console.log($scope.formData)
   }
   

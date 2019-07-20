@@ -64,11 +64,14 @@
         </div>
         <!--  -->
         <div class="form-group col-md-12 " ng-show="show_verify">
+            <small class="text-danger"  ng-show="!form.OTP_Verification.$untouched && form.OTP_Verification.$viewValue.length==0">
+                                Enter OTP.
+                                </small>
                 <input type="text" placeholder="OTP" minlength="6" maxlength="6" name="OTP_Verification"
                         ng-required="formData.mobile"
                         class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required"
                         ng-model="formData.otp">
-                <span class="tick_set"></span>
+                <span class="tick_set" ng-show="!form.OTP_Verification.$untouched && form.OTP_Verification.$viewValue.length==6"></span>
         </div>
         <div class="clearfix"></div>
 
@@ -115,16 +118,16 @@
         </div>
 
         <div class="form-group col-md-12">
-            <small class="text-danger"  ng-show="!form.pincode.$untouched && form.pincode.$viewValue.length==0">
+            <small class="text-danger" ng-show="!form.pincode.$untouched && form.pincode.$viewValue.length==0">
                                 Enter Pincode.
                                 </small>
-                <input type="text" placeholder="Pincode"
+                <input type="text" only-numbers  placeholder="Pincode"
                         class="form-control  ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
                         name="pincode" with-string="true" autocomplete="new-password" required="" maxlength="7"
                         numbers-only="numbers-only" ng-pattern="/^[1-9][0-9]{4,6}$/"
                         ng-blur="vm.getPincodeByStateFn(formData.personal_detail.pincode)"
                         ng-model="formData.personal_detail.pincode">
-                <span class="tick_set" ng-show=" form.pincode.$viewValue.length>1"></span>
+                <span class="tick_set" ng-show=" form.pincode.$viewValue.length>5"></span>
         </div>
 
         <div class="form-group col-md-12">
@@ -137,64 +140,65 @@
 
         <div class="form-group col-md-12 input_radiobtn lablerow">
                 <label for="">Employment Type</label>
-                <label for="referred" class="radio">
-                        <input type="radio" required="" name="employment_type" ng-checked="true"
-                                ng-click="vm.salariedClick()" ng-model="formData.personal_detail.employment_type"
+                <label for="employment_type" class="radio">
+                        <input type="radio" id="employment_type" required="" name="employment_type" ng-checked="true"
+                                 ng-model="formData.personal_detail.employment_type"
                                 value="SALARIED"
                                 class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
                                 checked="checked">
                         <span>Salaried</span>
                 </label>
-                <label for="unreferred" class="radio">
-                        <input type="radio" required="" name="employment_type" ng-click="vm.selfEmploymentClick()"
+                <label for="employment_type1" class="radio">
+                        <input type="radio" required="" id="employment_type1"  name="employment_type" 
                                 ng-model="formData.personal_detail.employment_type" value="SELF_EMPLOYED"
                                 class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
                         <span>Self Employed</span>
                 </label>
         </div>
-        <div class="form-group col-md-12 input_radiobtn lablerow">
+        <div class="form-group col-md-12 input_radiobtn lablerow" ng-show="formData.personal_detail.employment_type=='SALARIED'">
                 <label for=""> Mode of salary</label>
-                <label for="referred" class="radio">
-                        <input type="radio" name="mode_of_salary" ng-model="formData.personal_detail.mode_of_salary"
+                <label for="mode_of_salary" class="radio">
+                        <input type="radio" ng-checked="true" id="mode_of_salary" name="mode_of_salary"
+                                ng-model="formData.personal_detail.mode_of_salary" value="CHEQUE_OR_ONLINE_TRANSFER"
+                                class="ng-pristine ng-untouched ng-valid ng-not-empty" >
+                        <span>Cheque/Online Transfer</span>
+                </label>
+                <label for="mode_of_salary1" class="radio">
+                        <input type="radio"id="mode_of_salary1" name="mode_of_salary" ng-model="formData.personal_detail.mode_of_salary"
                                 value="CASH" class="ng-pristine ng-untouched ng-valid ng-not-empty">
                         <span>Cash</span>
                 </label>
-                <label for="unreferred" class="radio">
-                        <input type="radio" ng-checked="true" name="mode_of_salary"
-                                ng-model="formData.personal_detail.mode_of_salary" value="CHEQUE_OR_ONLINE_TRANSFER"
-                                class="ng-pristine ng-untouched ng-valid ng-not-empty" checked="checked">
-                        <span>Cheque/Online Transfer</span>
-                </label>
+                
         </div>
 
-        <div class="form-group col-md-12 input_radiobtn lablerow lablerow2">
+        <div class="form-group col-md-12 input_radiobtn lablerow lablerow2" ng-show="formData.personal_detail.employment_type=='SELF_EMPLOYED'">
                 <label for="">Do you have gumasta and udyog aadhar</label>
-                <label for="referred" class="radio">
-                        <input type="radio" name="mode_of_salary_aadhar"
-                                ng-model="formData.personal_detail.mode_of_salary_aadhar" value=""
-                                class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="mode_of_salary_aadhar" class="radio">
+                        <input type="radio" id="mode_of_salary_aadhar" name="mode_of_salary_aadhar"
+                                ng-model="formData.personal_detail.mode_of_salary_aadhar" value="yes"
+                                class="ng-pristine ng-untouched ng-valid ng-not-empty" >
                         <span>Yes</span>
                 </label>
-                <label for="unreferred" class="radio">
-                        <input type="radio" ng-checked="true" name="mode_of_salary_aadhar"
-                                ng-model="formData.personal_detail.mode_of_salary_aadhar" value=""
-                                class="ng-pristine ng-untouched ng-valid ng-not-empty" checked="checked">
+                <label for="mode_of_salary_aadhar1" class="radio">
+                        <input type="radio" ng-checked="true" id="mode_of_salary_aadhar1" name="mode_of_salary_aadhar"
+                                ng-model="formData.personal_detail.mode_of_salary_aadhar" value="no"
+                                class="ng-pristine ng-untouched ng-valid ng-not-empty" >
                         <span>No</span>
                 </label>
         </div>
 
-        <div class="form-group col-md-12 input_radiobtn lablerow lablerow2">
+        <div class="form-group col-md-12 input_radiobtn lablerow lablerow2" ng-show="formData.personal_detail.employment_type=='SELF_EMPLOYED'">
                 <label for="">Have you filed your ITR</label>
-                <label for="referred" class="radio">
-                        <input type="radio" name="mode_of_salary_ITR"
-                                ng-model="formData.personal_detail.mode_of_salary_ITR" value=""
-                                class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="mode_of_salary_ITR" class="radio">
+                        <input type="radio" id="mode_of_salary_ITR" name="mode_of_salary_ITR"
+                                ng-model="formData.personal_detail.mode_of_salary_ITR" value="yes"
+                                class="ng-pristine ng-untouched ng-valid ng-not-empty" >
                         <span>Yes</span>
                 </label>
-                <label for="unreferred" class="radio">
-                        <input type="radio" ng-checked="true" name=""
-                                ng-model="formData.personal_detail.mode_of_salary_ITR" value=""
-                                class="ng-pristine ng-untouched ng-valid ng-not-empty" checked="checked">
+                <label for="mode_of_salary_ITR1" class="radio">
+                        <input type="radio" ng-checked="true" id="mode_of_salary_ITR1" name="mode_of_salary_ITR"
+                                ng-model="formData.personal_detail.mode_of_salary_ITR" value="no"
+                                class="ng-pristine ng-untouched ng-valid ng-not-empty" >
                         <span>No</span>
                 </label>
         </div>
