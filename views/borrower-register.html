@@ -73,20 +73,19 @@
         <div class="form-group col-md-12">
 
             
-            <!--     <input type="text" placeholder="DOB" required=""  name="dob"
-                        id="sandbox-container" class="form-control ng-empty ng-invalid ng-invalid-required"
-                        ng-model="formData.dob" ng-click="OpenDatePicker()">
-                <span class="datetimeicon" ng-click="OpenDatePicker()"><img src="images/datetime.png"></span>
+             <input type="text" placeholder="DOB" required="" name="dob" class="form-control ng-empty ng-invalid ng-invalid-required" uib-datepicker-popup ng-model="formData.dob" is-open="popup2.opened" datepicker-options="dateOptions" ng-click="open2()" ng-required="true" close-text="Close" />
+
+                <span class="datetimeicon" ng-click="open2()"><img src="images/datetime.png"></span>
                 <div id="DataBox" ng-if="DatePicker">
                    <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
                 </div>
- -->
-                 <p class="input-group">
-          <input type="text"placeholder="DOB" required=""  class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+
+         <!--         <p class="input-group">
+          
           <span class="input-group-btn">
             <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
           </span>
-        </p>
+        </p> -->
 
         </div>
 
