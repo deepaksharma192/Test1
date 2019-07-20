@@ -41,10 +41,11 @@
         </div>
 
         <div class="form-group col-md-12">
+
             <small class="text-danger"  ng-show="!form.Email.$untouched && form.Email.$viewValue.length==0">
                                 Enter Email ID.
                                 </small>
-            <small class="text-danger"  ng-show="form.Email.$error.pattern && form.Email.$viewValue.length>20 ">
+            <small class="text-danger"  ng-show="!form.Email.$untouched && form.Email.$error.pattern  ">
                                 Invalid Email ID.
                                 </small>
                 <input type="text" placeholder="Email ID" ng-model="formData.email" id="reg_email" name="Email" ng-blur="validateEntryOfDetail($event)"
@@ -235,7 +236,7 @@
 
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="info text-center">
-                                        <button ng-click="registerFn()" class="btn btn-orange">Sign Up
+                                        <button ng-click="register()" class="btn btn-orange">Sign Up
                                         </button>
                                     </div>
                                 </div>

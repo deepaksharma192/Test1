@@ -4,6 +4,31 @@ app.controller("borrowerRegisterCtrl", function ($scope) {
   $scope.popup2 = {
     opened: false
   };
+   $scope.register = function(){
+    var d = $scope.formData;
+
+    if(!d.first_name){
+      alert("Enter Name.")
+    }else if(!d.email){
+      alert("Enter email.")
+    }else if(!d.mobile){
+      alert("Enter mobile.")
+    }else if(!d.otp){
+      alert("Enter otp.")
+    }else if(!d.pan_no){
+      alert("Enter pan no.")
+    }else if(!d.dob){
+      alert("Enter dob.")
+    }else if(!d.partner_referral_id){
+      alert("Enter partner referral id.")
+    }else if(!d.personal_detail.pincode){
+       alert("Enter pincode.")
+    }else if(!d.is_terms_of_privacy_policy){
+      alert("Select is_terms_of_privacy_policy.")
+    }else{
+      console.log($scope.formData)
+    }
+  }
 $scope.Salaried=true;
 
   $scope.formData =
@@ -43,8 +68,6 @@ $scope.Salaried=true;
    			 $scope.show_verify = true;
         }
     };
-  $scope.register = function(){
-  	console.log($scope.formData)
-  }
+ 
   
 });
