@@ -124,8 +124,7 @@
                                 </small>
                 <input type="text" only-numbers  placeholder="Pincode"
                         class="form-control  ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
-                        name="pincode" with-string="true" autocomplete="new-password" required="" maxlength="7"
-                        numbers-only="numbers-only" ng-pattern="/^[1-9][0-9]{4,6}$/"
+                        name="pincode" with-string="true" autocomplete="new-password" required="" maxlength="7" ng-pattern="/^[1-9][0-9]{4,6}$/"
                         ng-blur="vm.getPincodeByStateFn(formData.personal_detail.pincode)"
                         ng-model="formData.personal_detail.pincode">
                 <span class="tick_set" ng-show=" form.pincode.$viewValue.length>5"></span>
