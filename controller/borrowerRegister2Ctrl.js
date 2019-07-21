@@ -30,7 +30,8 @@ app.controller("borrowerRegister2Ctrl", function ($scope,$location) {
 	    pincode:"" ,
 	    City:"",
 	    State:"",
-	    Country:""
+	    Country:"",
+	    AddressType:"Owned"
     }
     
   }

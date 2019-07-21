@@ -56,8 +56,10 @@
                                  </div> 
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">City</label>
-                                    <input type="text" placeholder="Mumbai" ng-model="formData.address.City" id="City" name="City"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                   <label for="" class="labletext">City <small class="text-danger"  ng-show="!form.City.$untouched  && form.City.$viewValue.length==0">
+                                Enter City.
+                                </small></label>
+                                    <input type="text" placeholder="Mumbai" ng-model="formData.address.City" id="City" name="City"  class="form-control ng-pristine ng-untouched ng-valid ng-untouched ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
                                    <label for="" class="labletext">State</label>
@@ -91,7 +93,7 @@
                              </div>
 
 
-
+              <div ng-show="formData.Details.Employmenttype=='Self-employed'">
 
                              <div class="form-group col-md-6 col-xm-6 col-sm-6 input_radiobtn lablerow">
                                   <label for="">Business /Professional</label>
@@ -175,7 +177,7 @@
                                     <input type="text" only-numbers placeholder="2 cr." id="TurnOver" name="TurnOver" ng-model="formData.Details.TurnOver" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
 
-
+ </div> 
 
                                      <div class="col-sm-12">
                                   <div class="hadding03">Office Address</div>
@@ -205,28 +207,28 @@
                         ng-model="formData.Office.pincode" autocomplete="off">
                                  </div> 
 
-                                  <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
+                                <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
                                    <label for="" class="labletext">City</label>
-                                    <input type="text" placeholder="Mumbai" ng-model="" id="City" name="City" ng-blur="" ng-pattern="" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <input type="text" placeholder="Mumbai" ng-model="formData.Office.City" id="OfCity" name="OfCity"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
                                    <label for="" class="labletext">State</label>
-                                    <input type="text" placeholder="Mahrashtra" ng-model="" id="state" name="state" ng-blur="" ng-pattern="" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <input type="text" placeholder="Mahrashtra"  id="Ofstate" name="Ofstate" ng-model="formData.Office.State" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
                                    <label for="" class="labletext">Country</label>
-                                    <input type="text" placeholder="India" ng-model="" id="country" name="country" ng-blur="" ng-pattern="" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
-                                 </div> 
+                                    <input type="text" placeholder="India" ng-model="formData.Office.Country" id="Ofcountry" name="Ofcountry" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                 </div>  
                                    <div class="form-group col-md-6 col-xm-6 col-sm-6">
                                    <label for="" class="labletext">Address Type</label>
-                                   <select class="form-control selectarrow" id="sel1"  placeholder="House Type">
-                                    <option>Owned</option>
-                                    <option>Owned</option> 
+                                   <select class="form-control selectarrow" ng-model="formData.Office.AddressType"  id="AddressType" name="AddressType"  placeholder="House Type">
+                                    <option value="Owned">Owned</option>
+                                    <option value="Rented">Rented</option> 
                                   </select>
                                 </div>
 
-                              
+                            
 
                                
                             </div>
