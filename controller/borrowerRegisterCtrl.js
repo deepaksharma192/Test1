@@ -12,6 +12,7 @@ app.controller("borrowerRegisterCtrl", function ($scope,$location) {
     pan_no:"",
     dob:"",
     partner_referral_id:"",
+    House_Type:"Owned",
     personal_detail:{
       pincode:"",
       employment_type:"SALARIED",
