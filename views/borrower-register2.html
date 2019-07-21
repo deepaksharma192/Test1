@@ -62,12 +62,16 @@
                                     <input type="text" placeholder="Mumbai" ng-model="formData.address.City" id="City" name="City"  class="form-control ng-pristine ng-untouched ng-valid ng-untouched ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">State</label>
+                                   <label for="" class="labletext">State <small class="text-danger"  ng-show="!form.state.$untouched  && form.state.$viewValue.length==0">
+                                Enter State.
+                                </small></label>
                                     <input type="text" placeholder="Mahrashtra"  id="state" name="state" ng-model="formData.address.State" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Country</label>
+                                   <label for="" class="labletext">Country <small class="text-danger"  ng-show="!form.country.$untouched  && form.country.$viewValue.length==0">
+                                Enter Country.
+                                </small></label>
                                     <input type="text" placeholder="India" ng-model="formData.address.Country" id="country" name="country" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
 
@@ -108,7 +112,9 @@
                              </div>
 
                                <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Firm Name</label>
+                                   <label for="" class="labletext">Firm Name <small class="text-danger"  ng-show="!form.FirmName.$untouched  && form.FirmName.$viewValue.length==0">
+                                Enter Firm Name.
+                                </small></label>
                                     <input type="text" placeholder="Sankalp Food" ng-model="formData.Details.FirmName" id="FirmName" name="FirmName"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
 
@@ -121,12 +127,16 @@
                                 </div>
 
                                 <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Designation</label>
+                                   <label for="" class="labletext">Designation <small class="text-danger"  ng-show="!form.Designation.$untouched  && form.Designation.$viewValue.length==0">
+                                Enter Designation.
+                                </small></label>
                                     <input type="text" placeholder="Marketing Executive" ng-model="formData.Details.Designation" id="Designation" name="Designation"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div>
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Employeed Since</label>
+                                   <label for="" class="labletext">Employeed Since <small class="text-danger"  ng-show="!form.EmployeedSince.$untouched  && form.EmployeedSince.$viewValue.length==0">
+                                Enter Employeed Since.
+                                </small></label>
                                     <input type="text" placeholder="20 Years" ng-model="formData.Details.EmployeedSince" id="EmployeedSince" name="EmployeedSince" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div>
 
@@ -195,7 +205,7 @@
                                  </div> 
 
                                    <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Pin Code <small class="text-danger"  ng-show="!form.pincode.$untouched  && form.pincode.$viewValue.length==0">
+                                   <label for="" class="labletext">Pin Code <small class="text-danger"  ng-show="!form.Ofpincode.$untouched  && form.Ofpincode.$viewValue.length==0">
                                 Ender paying name.
                                 </small><small class="text-danger"  ng-show="!form.Ofpincode.$untouched  && form.Ofpincode.$viewValue.length<4 && form.Ofpincode.$viewValue.length>0 ">
                                 Invalid.
@@ -208,16 +218,22 @@
                                  </div> 
 
                                 <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">City</label>
+                                   <label for="" class="labletext">City <small class="text-danger"  ng-show="!form.OfCity.$untouched  && form.OfCity.$viewValue.length==0">
+                                Ender City.
+                                </small></label>
                                     <input type="text" placeholder="Mumbai" ng-model="formData.Office.City" id="OfCity" name="OfCity"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">State</label>
+                                   <label for="" class="labletext">State <small class="text-danger"  ng-show="!form.Ofstate.$untouched  && form.Ofstate.$viewValue.length==0">
+                                Ender State.
+                                </small></label>
                                     <input type="text" placeholder="Mahrashtra"  id="Ofstate" name="Ofstate" ng-model="formData.Office.State" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div> 
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Country</label>
+                                   <label for="" class="labletext">Country <small class="text-danger"  ng-show="!form.Ofcountry.$untouched  && form.Ofcountry.$viewValue.length==0">
+                                Ender Country.
+                                </small></</label>
                                     <input type="text" placeholder="India" ng-model="formData.Office.Country" id="Ofcountry" name="Ofcountry" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div>  
                                    <div class="form-group col-md-6 col-xm-6 col-sm-6">
