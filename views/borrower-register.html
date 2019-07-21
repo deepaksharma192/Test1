@@ -93,9 +93,9 @@
             <small class="text-danger"  ng-show="!form.dob.$untouched && form.dob.$viewValue.length==0">
                                 Enter DOB.
                                 </small>
-             <input type="text" ng-readonly="expression" placeholder="DOB" required="" name="dob" class="form-control ng-empty ng-invalid ng-invalid-required" uib-datepicker-popup ng-model="formData.dob" is-open="popup2.opened" datepicker-options="dateOptions" ng-click="open2()" ng-required="true" close-text="Close" />
+             <input type="text" ng-readonly="expression" placeholder="DOB" required="" name="dob" class="form-control ng-empty ng-invalid ng-invalid-required" uib-datepicker-popup ng-model="formData.dob" is-open="popup2.opened" datepicker-options="dateOptions" ng-click="openCalendar()" ng-required="true" close-text="Close" />
 
-                <span class="datetimeicon" ng-click="open2()"><img src="images/datetime.png"></span>
+                <span class="datetimeicon" ng-click="openCalendar()"><img src="images/datetime.png"></span>
                 <div id="DataBox" ng-if="DatePicker">
                    <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
                 </div>
@@ -103,7 +103,7 @@
          <!--         <p class="input-group">
           
           <span class="input-group-btn">
-            <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+            <button type="button" class="btn btn-default" ng-click="openCalendar()"><i class="glyphicon glyphicon-calendar"></i></button>
           </span>
         </p> -->
 

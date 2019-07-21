@@ -1,12 +1,28 @@
 app.controller("borrowerRegisterCtrl", function ($scope,$location) {
   $scope.DatePicker = false;		
   $scope.show_verify = false;
-  $scope.popup2 = {
-    opened: false
-  };
-   $scope.register = function(){
+  $scope.Salaried=true;
+  $scope.popup2 = {opened: false};
+  $scope.formData =
+  {
+    first_name:"",
+    email:"",
+    mobile:"",
+    otp:"",
+    pan_no:"",
+    dob:"",
+    partner_referral_id:"",
+    personal_detail:{
+      pincode:"",
+      employment_type:"SALARIED",
+      mode_of_salary:"CHEQUE_OR_ONLINE_TRANSFER",
+      mode_of_salary_aadhar:"no",
+      mode_of_salary_ITR:"no"
+    },
+    is_terms_of_privacy_policy:""     
+  }
+  $scope.register = function(){
     var d = $scope.formData;
-
     if(!d.first_name){
       alert("Enter Name.")
     }else if(!d.email){
@@ -30,27 +46,10 @@ app.controller("borrowerRegisterCtrl", function ($scope,$location) {
       $location.path('/borrower-register1/')
     }
   }
-$scope.Salaried=true;
 
-  $scope.formData =
-  {
-	first_name:"",
-	email:"",
-	mobile:"",
-	otp:"",
-	pan_no:"",
-	dob:"",
-	partner_referral_id:"",
-	personal_detail:{
-		pincode:"",
-		employment_type:"SALARIED",
-		mode_of_salary:"CHEQUE_OR_ONLINE_TRANSFER",
-		mode_of_salary_aadhar:"no",
-		mode_of_salary_ITR:"no"
-	},
-	is_terms_of_privacy_policy:""		  
-  }
-    $scope.open2 = function() {
+
+  
+  $scope.openCalendar = function() {
     $scope.popup2.opened = true;
   };
   $scope.validateEntryOfDetail = function($event){
