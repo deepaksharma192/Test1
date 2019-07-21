@@ -1,4 +1,4 @@
-app.controller("borrowerRegisterCtrl", function ($scope) {
+app.controller("borrowerRegisterCtrl", function ($scope,$location) {
   $scope.DatePicker = false;		
   $scope.show_verify = false;
   $scope.popup2 = {
@@ -27,6 +27,7 @@ app.controller("borrowerRegisterCtrl", function ($scope) {
       alert("Select is_terms_of_privacy_policy.")
     }else{
       console.log($scope.formData)
+      $location.path('/borrower-register1/')
     }
   }
 $scope.Salaried=true;
