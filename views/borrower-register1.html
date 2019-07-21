@@ -17,18 +17,18 @@
 
                                  <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
                                    <label for="" class="labletext">Loan Tenure</label>
-                                    <input type="text" placeholder="12 Months" ng-model="formData.Loan_tenure" id="LoanTenure" name="Loan Tenure" ng-blur="" ng-pattern="" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <input type="text" only-numbers placeholder="12 Months" ng-model="formData.Loan_tenure" id="LoanTenure" name="Loan Tenure" ng-blur="" ng-pattern="" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
                                  </div>  
                                  <div class="form-group col-md-6 col-xm-6 col-sm-6">
                                    <label for="" class="labletext">Purpose of Loan</label>
-                                   <select class="form-control selectarrow" id="sel1" ng-model="formData.Loan_tenure"  placeholder="House Type">
-                                    <option>Medical Emergency</option>
-                                    <option>Medical Emergency</option> 
+                                   <select class="form-control selectarrow" id="sel1" ng-model="formData.Loan_Purpose"  placeholder="House Type">
+                                    <option value="Medical Emergency">Medical Emergency</option>
+                                    <option value="Medical Emergency">Medical Emergency</option> 
                                   </select>
                                 </div> 
                                 <div class="form-group col-md-6 col-xm-6 col-sm-6 " > 
                                   <label for="" class="labletext">Affordable EMI</label>
-                                    <input type="text" placeholder="Rs. 5,000" minlength="6" maxlength="6" name="OTP_Verification" ng-required="Affordable" class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required" ng-model="vm.detail.otp">
+                                    <input type="text" only-numbers placeholder="Rs. 5,000" minlength="6" maxlength="6" name="OTP_Verification" ng-required="Affordable" class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required" ng-model="formData.Loan_Affordable">
                                  </div>
                                 <div class="clearfix"></div> 
                              
@@ -37,11 +37,11 @@
                               <div class="form-group col-md-6 col-xm-6 col-sm-6 input_radiobtn lablerow">
                                   <label for="">Gender</label>
                                        <label for="referred" class="radio">
-                                    <input type="radio" required="" name="Gender" ng-checked="true" ng-click="" ng-model="" value="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
+                                    <input type="radio" name="Gender"   ng-model="formData.Gender" value="Male" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
                                     <span>Male</span>
                                     </label>
                                      <label for="unreferred" class="radio">
-                                    <input type="radio" required="" name="Gender" ng-click="" ng-model="" value="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
+                                    <input type="radio"  name="Gender"  ng-model="formData.Gender" value="Female" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
                                     <span>Female</span>
                                     </label>
                              </div>
@@ -49,11 +49,11 @@
                                <div class="form-group col-md-6 col-xm-6 col-sm-6 input_radiobtn lablerow">
                                   <label for="">Marital Status</label>
                                        <label for="referred" class="radio">
-                                    <input type="radio" required="" name="Marital" ng-checked="true" ng-click="" ng-model="" value="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
+                                    <input type="radio"  name="Marital" ng-model="formData.Marital" value="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
                                     <span>Single</span>
                                     </label>
                                      <label for="unreferred" class="radio">
-                                    <input type="radio" required="" name="Marital" ng-click="" ng-model="" value="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
+                                    <input type="radio"  name="Marital" ng-model="formData.Marital" value="" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
                                     <span>Married</span>
                                     </label>
                              </div>

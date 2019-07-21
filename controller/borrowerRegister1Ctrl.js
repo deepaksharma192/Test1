@@ -3,10 +3,10 @@ app.controller("borrowerRegister1Ctrl", function ($scope) {
   {
     Loan_amount:"",
     Loan_tenure:"",
-    mobile:"",
-    otp:"",
-    pan_no:"",
-    dob:"",
+    Loan_Purpose:"",
+    Loan_Affordable:"",
+    Gender:"Male",
+    Marital:"Single",
     partner_referral_id:"",
     personal_detail:{
       pincode:"",
