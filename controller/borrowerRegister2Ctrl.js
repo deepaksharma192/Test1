@@ -36,28 +36,50 @@ app.controller("borrowerRegister2Ctrl", function ($scope,$location) {
     
   }
    $scope.register = function(){
+   	var check1=false;
+   	var check2=false;
     var d = $scope.formData;
     if(d.houseType == 'Rented' && d.rent == ""){
       alert("Enter Rented.")
-    }else if(!d.address1){
+    }else if(!d.address.address1){
       alert("Enter address1.")
-    }else if(!d.pincode){
+    }else if(!d.address.pincode){
       alert("Enter pincode.")
-    }else if(!d.Loan_Affordable){
-      alert("Enter Loan_Affordable EMI.")
-    }else if(d.Marital == "Married" && d.Spouse_Working == "Yes" && d.Spouse_Monthly_Income ==""){
-      alert("Enter Spouse_Monthly_Income.")
-    }else if(d.Working_Parents == "Yes" && d.Parent_Monthly_Income ==""){
-      alert("Enter Parent_Monthly_Income.")
-    }else if(d.other_source == "Yes" && d.other_Income_Amount ==""){
-      alert("Enter other_Income_Amount.")
-    }else if(!d.Education){
-      alert("Select Education.")
-    }else if(d.Marital == "Married" && d.Kids == ""){
-       alert("Enter Kids.")
+    }else if(!d.address.City){
+      alert("Enter City.")
+    }else if(!d.address.State){
+      alert("Enter State.")
+    }else if(!d.address.Country){
+      alert("Enter Country.")
+    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.FirmName){
+	      alert("Enter FirmName.")
+	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.Designation){
+	      alert("Enter Designation.")
+	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.EmployeedSince){
+	      alert("Enter EmployeedSince.")
+	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.OfficialEmail){
+	      alert("Enter OfficialEmail.")
+	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.OfficialContact){
+	      alert("Enter OfficialContact.")
+	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.PAN){
+	      alert("Enter PAN.")
+	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.Operations){
+	      alert("Enter Operations.")
+	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.TurnOver){
+	      alert("Enter TurnOver.")
+	    }else if(!d.Office.address1){
+      alert("Enter Office address1.")
+    }else if(!d.Office.pincode){
+      alert("Enter Office pincode.")
+    }else if(!d.Office.City){
+      alert("Enter Office City.")
+    }else if(!d.Office.State){
+      alert("Enter Office State.")
+    }else if(!d.Office.Country){
+      alert("Enter Office Country.")
     }else{
       console.log($scope.formData)
-      $location.path('/borrower-register2/')
+      //$location.path('/borrower-register/')
     }
   }
 
