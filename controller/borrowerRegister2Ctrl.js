@@ -19,6 +19,18 @@ app.controller("borrowerRegister2Ctrl", function ($scope,$location) {
     	Designation:"",
     	EmployeedSince:"",
     	OfficialEmail:"",
+    	OfficialContact:"",
+    	PAN:"",
+    	Operations:"",
+    	TurnOver:""
+    },
+    Office:{
+    	address1:"" ,
+	    address2:"" ,
+	    pincode:"" ,
+	    City:"",
+	    State:"",
+	    Country:""
     }
     
   }
