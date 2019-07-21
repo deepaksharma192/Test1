@@ -79,6 +79,7 @@ app.controller("borrowerRegister2Ctrl", function ($scope,$location) {
       alert("Enter Office Country.")
     }else{
       console.log($scope.formData)
+      alert("done")
       //$location.path('/borrower-register/')
     }
   }
