@@ -6,11 +6,10 @@
                     <h1 class="m1_hading">Borrower Registration</h1>                    
                 </div>
                 <div class="borrower-register-input">
-                    <div class="register-inputs"> 
+                    <div class="register-inputs form2"> 
                         <form name="form" class="lableBoldForm ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-minlength ng-valid-pattern ng-dirty ng-valid-parse" novalidate="">
 
                             <div class="row">
-
                               <div class="form-group col-md-6 col-xm-6 col-sm-6">
                                    <label for="" class="labletext">House Type</label>
                                    <select class="form-control selectarrow" id="sel1" ng-model="formData.houseType" name="houseType" placeholder="House Type">
@@ -21,10 +20,11 @@
 
 
                                 <div class="form-group col-md-6 col-xm-6 col-sm-6" ng-show="formData.houseType=='Rented'"> 
-                                  <label for="" class="labletext">Who is paying the rent? <small class="text-danger"  ng-show="!form.rent.$untouched  && form.rent.$viewValue.length==0">
-                                Ender paying name.
-                                </small></label>
+                                  <label for="" class="labletext">Who is paying the rent? </label>
                                     <input type="text" placeholder="Rajesh" name="rent"  class="ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-untouched ng-touched form-control" ng-model="formData.rent" >
+                                    <small class="text-danger"  ng-show="!form.rent.$untouched  && form.rent.$viewValue.length==0">
+                                     Enter paying name.
+                                </small>
                                 </div>
 
                                      <div class="col-sm-12">
@@ -32,10 +32,11 @@
                                 </div>
 
                                  <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Address Line 1 <small class="text-danger"  ng-show="!form.address1.$untouched  && form.address1.$viewValue.length==0">
-                                Ender paying name.
-                                </small></label>
+                                   <label for="" class="labletext">Address Line 1 </label>
                                     <input type="text" placeholder="5, Alpesh Apartment" ng-model="formData.address.address1" id="address1" name="address1"  class="form-control ng-pristine ng-untouched ng-touched ng-valid ng-empty " autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.address1.$untouched  && form.address1.$viewValue.length==0">
+                                    Enter Address.
+                                </small>
                                  </div> 
                                  <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
                                    <label for="" class="labletext">Address Line 2</label>
@@ -43,36 +44,40 @@
                                  </div> 
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Pin Code <small class="text-danger"  ng-show="!form.pincode.$untouched  && form.pincode.$viewValue.length==0">
-                                Ender paying name.
-                                </small><small class="text-danger"  ng-show="!form.pincode.$untouched  && form.pincode.$viewValue.length<4 && form.pincode.$viewValue.length>0 ">
-                                Invalid.
-                                </small></label>
+                                   <label for="" class="labletext">Pin Code </label>
                                     <input type="text" only-numbers  placeholder="400 001"
                         class="form-control  ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
                         name="pincode"  autocomplete="new-password"  maxlength="6" ng-pattern="/^[1-9][0-9]{4,6}$/"
                         ng-blur="getPincodeByState(formData.address.pincode)"
                         ng-model="formData.address.pincode" autocomplete="off">
+                                  <small class="text-danger"  ng-show="!form.pincode.$untouched  && form.pincode.$viewValue.length==0">
+                                Enter Pin Code.
+                                </small><small class="text-danger"  ng-show="!form.pincode.$untouched  && form.pincode.$viewValue.length<4 && form.pincode.$viewValue.length>0 ">
+                                Invalid.
+                                </small>
                                  </div> 
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">City <small class="text-danger"  ng-show="!form.City.$untouched  && form.City.$viewValue.length==0">
-                                Enter City.
-                                </small></label>
+                                   <label for="" class="labletext">City </label>
                                     <input type="text" placeholder="Mumbai" ng-model="formData.address.City" id="City" name="City"  class="form-control ng-pristine ng-untouched ng-valid ng-untouched ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.City.$untouched  && form.City.$viewValue.length==0">
+                                    Enter City.
+                                </small>
                                  </div> 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">State <small class="text-danger"  ng-show="!form.state.$untouched  && form.state.$viewValue.length==0">
-                                Enter State.
-                                </small></label>
+                                   <label for="" class="labletext">State </label>
                                     <input type="text" placeholder="Mahrashtra"  id="state" name="state" ng-model="formData.address.State" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.state.$untouched  && form.state.$viewValue.length==0">
+                                    Enter State.
+                                </small>
                                  </div> 
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Country <small class="text-danger"  ng-show="!form.country.$untouched  && form.country.$viewValue.length==0">
-                                Enter Country.
-                                </small></label>
+                                   <label for="" class="labletext">Country </label>
                                     <input type="text" placeholder="India" ng-model="formData.address.Country" id="country" name="country" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.country.$untouched  && form.country.$viewValue.length==0">
+                                    Enter Country.
+                                </small>
                                  </div> 
 
                                   <div class="clearfix"></div>
@@ -87,117 +92,140 @@
                               <div class="form-group col-md-6 col-xm-6 col-sm-6 input_radiobtn lablerow">
                                   <label for="">Employment Type</label>
                                        <label for="Employmenttype" class="radio">
-                                    <input type="radio" id="Employmenttype" name="Employmenttype" ng-model="formData.Details.Employmenttype" value="Salaried" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
+                                    <input type="radio" id="Employmenttype" name="Employmenttype" ng-model="formData.Employmenttype" value="Salaried" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
                                     <span>Salaried</span>
                                     </label>
                                      <label for="Employmenttype1" class="radio">
-                                    <input type="radio" id="Employmenttype1" name="Employmenttype"ng-model="formData.Details.Employmenttype" value="Self-employed" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
+                                    <input type="radio" id="Employmenttype1" name="Employmenttype" ng-model="formData.Employmenttype" value="Self-employed" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
                                     <span>Self-employed</span>
                                     </label>
                              </div>
 
-
-              <div ng-show="formData.Details.Employmenttype=='Self-employed'">
-
                              <div class="form-group col-md-6 col-xm-6 col-sm-6 input_radiobtn lablerow">
                                   <label for="">Business /Professional</label>
                                        <label for="Business" class="radio">
-                                    <input type="radio" id="Business" name="Business" ng-model="formData.Details.Business" value="Business" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
+                                    <input type="radio" id="Business" name="Business" ng-model="formData.Business" value="Business" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
                                     <span>Business</span>
                                     </label>
                                      <label for="Business1" class="radio">
-                                    <input type="radio" id="Business1" name="Business" ng-model="formData.Details.Business" value="Professional" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
+                                    <input type="radio" id="Business1" name="Business" ng-model="formData.Business" value="Professional" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
                                     <span>Professional</span>
                                     </label>
                              </div>
 
-                               <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Firm Name <small class="text-danger"  ng-show="!form.FirmName.$untouched  && form.FirmName.$viewValue.length==0">
-                                Enter Firm Name.
-                                </small></label>
-                                    <input type="text" placeholder="Sankalp Food" ng-model="formData.Details.FirmName" id="FirmName" name="FirmName"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                             <div ng-show="formData.Employmenttype=='Salaried'">
+                                <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
+                                   <label for="" class="labletext">Firm Name </label>
+                                    <input type="text" placeholder="Sankalp Food" ng-model="formData.Details_Salaried.FirmName" id="FirmName1" name="FirmName1"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.FirmName1.$untouched  && form.FirmName1.$viewValue.length==0">
+                                    Enter Firm Name.
+                                </small>
                                  </div> 
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6">
                                    <label for="" class="labletext">Firm Type</label>
-                                   <select class="form-control selectarrow" ng-model="formData.Details.FirmType" id="FirmType" name="FirmType"  placeholder="House Type">
+                                   <select class="form-control selectarrow" ng-model="formData.Details_Salaried.FirmType" id="FirmType" name="FirmType"  placeholder="House Type">
                                     <option value="FMCG 1">FMCG 1</option>
                                     <option value="FMCG 2">FMCG 2</option> 
                                   </select>
                                 </div>
 
                                 <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Designation <small class="text-danger"  ng-show="!form.Designation.$untouched  && form.Designation.$viewValue.length==0">
-                                Enter Designation.
-                                </small></label>
-                                    <input type="text" placeholder="Marketing Executive" ng-model="formData.Details.Designation" id="Designation" name="Designation"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                   <label for="" class="labletext">Designation </label>
+                                    <input type="text" placeholder="Marketing Executive" ng-model="formData.Details_Salaried.Designation" id="Designation" name="Designation"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.Designation.$untouched  && form.Designation.$viewValue.length==0">
+                                    Enter Designation.
+                                </small>
                                  </div>
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Employeed Since <small class="text-danger"  ng-show="!form.EmployeedSince.$untouched  && form.EmployeedSince.$viewValue.length==0">
-                                Enter Employeed Since.
-                                </small></label>
-                                    <input type="text" placeholder="20 Years" ng-model="formData.Details.EmployeedSince" id="EmployeedSince" name="EmployeedSince" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                   <label for="" class="labletext">Employeed Since</label>
+                                    <input type="text" placeholder="20 Years" ng-model="formData.Details_Salaried.EmployeedSince" id="EmployeedSince" name="EmployeedSince" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.EmployeedSince.$untouched  && form.EmployeedSince.$viewValue.length==0">
+                                    Enter Employeed Since.
+                                </small>
                                  </div>
 
                                    <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Official Email ID (Optional) <small class="text-danger"  ng-show="!form.OfficialEmail.$untouched && form.OfficialEmail.$viewValue.length==0">
-                                Enter OfficialEmail ID.
-                                </small>
-            <small class="text-danger"  ng-show="!form.OfficialEmail.$untouched && form.OfficialEmail.$error.pattern  ">
-                                Invalid OfficialEmail ID.
-                                </small></label>
-                                    <input type="text" placeholder="Rajesh@sankalp.com" ng-model="formData.Details.OfficialEmail" id="OfficialEmail" name="OfficialEmail"  ng-pattern="/^[a-zA-Z0-9]+[a-zA-Z0-9._]+@[a-zA-Z0-9_-]+\.[a-zA-Z]{2,5}$/"
+                                   <label for="" class="labletext">Official E-mail ID (Optional) </label>
+                                    <input type="text" placeholder="Rajesh@sankalp.com" ng-model="formData.Details_Salaried.OfficialEmail" id="OfficialEmail" name="OfficialEmail"  ng-pattern="/^[a-zA-Z0-9]+[a-zA-Z0-9._]+@[a-zA-Z0-9_-]+\.[a-zA-Z]{2,5}$/"
                   class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern"
                   autocomplete="off" >
+                                  <small class="text-danger"  ng-show="!form.OfficialEmail.$untouched && form.OfficialEmail.$viewValue.length==0">
+                                Enter Official E-mail ID.
+                                </small>
+            <small class="text-danger"  ng-show="!form.OfficialEmail.$untouched && form.OfficialEmail.$error.pattern  ">
+                                Invalid Official E-mail ID.
+                                </small>
                                  </div>
 
                                    <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Official Contact No. <small class="text-danger"  ng-show="!form.OfficialContact.$untouched && form.OfficialContact.$viewValue.length>=0 && form.OfficialContact.$viewValue.length<10">
-                                Enter valid Mobile No.
-                                </small></label>
-                                    <input type="text" placeholder="8850985264" ng-model="formData.Details.OfficialContact" id="OfficialContact" name="OfficialContact"  minlength="10" only-numbers maxlength="10" class="form-control ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" autocomplete="off">
+                                   <label for="" class="labletext">Official Contact No. </label>
+                                    <input type="text" placeholder="8850985264" ng-model="formData.Details_Salaried.OfficialContact" id="OfficialContact" name="OfficialContact"  minlength="10" only-numbers maxlength="10" class="form-control ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.OfficialContact.$untouched && form.OfficialContact.$viewValue.length>=0 && form.OfficialContact.$viewValue.length<10">
+                                    Enter valid Mobile No.
+                                </small>
                                  </div>
+                             </div>
+
+              <div ng-show="formData.Employmenttype=='Self-employed'"> 
+                               <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
+                                   <label for="" class="labletext">Firm Name </label>
+                                    <input type="text" placeholder="Sankalp Food" ng-model="formData.Details_Self_employed.FirmName" id="FirmName" name="FirmName"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.FirmName.$untouched  && form.FirmName.$viewValue.length==0">
+                                    Enter Firm Name.
+                                 </small>
+                                 </div> 
+
+                                  <div class="form-group col-md-6 col-xm-6 col-sm-6">
+                                   <label for="" class="labletext">Firm Type</label>
+                                   <select class="form-control selectarrow" ng-model="formData.Details_Self_employed.FirmType" id="FirmType" name="FirmType"  placeholder="House Type">
+                                    <option value="FMCG 1">FMCG 1</option>
+                                    <option value="FMCG 2">FMCG 2</option> 
+                                  </select>
+                                </div> 
 
                                 <div class="clearfix"></div>                                 
                               
 
                               <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">PAN No.  <small class="text-danger"  ng-show="!form.PAN.$untouched && form.PAN.$viewValue.length==0">
+                                   <label for="" class="labletext">PAN No.  </label>
+                                    <input type="text" ng-model="formData.Details_Self_employed.PAN" placeholder="AXNPO9098A"  id="PAN" name="PAN" minlength="10" maxlength="10" name="pan_card" ng-pattern="/[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}/" class="form-control ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"  autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.PAN.$untouched && form.PAN.$viewValue.length==0">
                                 Enter PAN number.
                                 </small>
          <small class="text-danger"  ng-show="form.PAN.$error.pattern && form.PAN.$viewValue.length==10 ">
                                 Invalid PAN number.
-                                </small></label>
-                                    <input type="text" ng-model="formData.Details.PAN" placeholder="AXNPO9098A"  id="PAN" name="PAN" minlength="10" maxlength="10" name="pan_card" ng-pattern="/[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}/" class="form-control ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"  autocomplete="off">
+                                </small>
                                  </div>
 
                                 <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Years Of Operations <small class="text-danger"  ng-show="!form.Operations.$untouched && form.Operations.$viewValue.length==0">
-                                Enter Years.
-                                </small></label>
-                                    <input type="text" only-numbers placeholder="20 Years"  id="Operations" name="Operations" ng-model="formData.Details.Operations" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                   <label for="" class="labletext">Years Of Operations </label>
+                                    <input type="text" only-numbers placeholder="20 Years"  id="Operations" name="Operations" ng-model="formData.Details_Self_employed.Operations" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.Operations.$untouched && form.Operations.$viewValue.length==0">
+                                    Enter Years Of Operations.
+                                </small>
                                  </div>
  
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Turn Over (Sales) <small class="text-danger"  ng-show="!form.TurnOver.$untouched && form.TurnOver.$viewValue.length==0">
-                                Enter Turn Over.
-                                </small></label>
-                                    <input type="text"  placeholder="2 cr." id="TurnOver" name="TurnOver" ng-model="formData.Details.TurnOver" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                   <label for="" class="labletext">Turn Over (Sales) </label>
+                                    <input type="text"  placeholder="2 cr." id="TurnOver" name="TurnOver" ng-model="formData.Details_Self_employed.TurnOver" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.TurnOver.$untouched && form.TurnOver.$viewValue.length==0">
+                                    Enter Turn Over.
+                                    </small>
                                  </div> 
 
- </div> 
-
-                                     <div class="col-sm-12">
+                                  <div class="col-sm-12">
                                   <div class="hadding03">Office Address</div>
                                 </div>
 
                                <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Address Line 1 <small class="text-danger"  ng-show="!form.Ofaddress1.$untouched  && form.Ofaddress1.$viewValue.length==0">
-                                Ender paying name.
-                                </small></label>
+                                   <label for="" class="labletext">Address Line 1 </label>
                                     <input type="text" placeholder="5, Alpesh Apartment" ng-model="formData.Office.address1" id="Ofaddress1" name="Ofaddress1"  class="form-control ng-pristine ng-untouched ng-touched ng-valid ng-empty " autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.Ofaddress1.$untouched  && form.Ofaddress1.$viewValue.length==0">
+                                    Enter Address.
+                                </small>
                                  </div> 
                                  <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
                                    <label for="" class="labletext">Address Line 2</label>
@@ -205,36 +233,40 @@
                                  </div> 
 
                                    <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Pin Code <small class="text-danger"  ng-show="!form.Ofpincode.$untouched  && form.Ofpincode.$viewValue.length==0">
-                                Ender paying name.
-                                </small><small class="text-danger"  ng-show="!form.Ofpincode.$untouched  && form.Ofpincode.$viewValue.length<4 && form.Ofpincode.$viewValue.length>0 ">
-                                Invalid.
-                                </small></label>
+                                   <label for="" class="labletext">Pin Code </label>
                                     <input type="text" only-numbers  placeholder="400 001"
                         class="form-control  ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
                         name="Ofpincode"  autocomplete="new-password"  maxlength="6" ng-pattern="/^[1-9][0-9]{4,6}$/"
                         ng-blur="getPincodeByState(formData.address.pincode)"
                         ng-model="formData.Office.pincode" autocomplete="off">
+                                  <small class="text-danger"  ng-show="!form.Ofpincode.$untouched  && form.Ofpincode.$viewValue.length==0">
+                                Enter Pin Code.
+                                </small><small class="text-danger"  ng-show="!form.Ofpincode.$untouched  && form.Ofpincode.$viewValue.length<4 && form.Ofpincode.$viewValue.length>0 ">
+                                Invalid.
+                                </small>
                                  </div> 
 
                                 <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">City <small class="text-danger"  ng-show="!form.OfCity.$untouched  && form.OfCity.$viewValue.length==0">
-                                Ender City.
-                                </small></label>
+                                   <label for="" class="labletext">City </label>
                                     <input type="text" placeholder="Mumbai" ng-model="formData.Office.City" id="OfCity" name="OfCity"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.OfCity.$untouched  && form.OfCity.$viewValue.length==0">
+                                    Enter City.
+                                </small>
                                  </div> 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">State <small class="text-danger"  ng-show="!form.Ofstate.$untouched  && form.Ofstate.$viewValue.length==0">
-                                Ender City.
-                                </small></label>
+                                   <label for="" class="labletext">State</label>
                                     <input type="text" placeholder="Mahrashtra"  id="Ofstate" name="Ofstate" ng-model="formData.Office.State" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.Ofstate.$untouched  && form.Ofstate.$viewValue.length==0">
+                                    Enter State.
+                                </small>
                                  </div> 
 
                                   <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="" class="labletext">Country <small class="text-danger"  ng-show="!form.Ofcountry.$untouched  && form.Ofcountry.$viewValue.length==0">
-                                Ender Country.
-                                </small></label>
+                                   <label for="" class="labletext">Country </label>
                                     <input type="text" placeholder="India" ng-model="formData.Office.Country" id="Ofcountry" name="Ofcountry" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern" autocomplete="off">
+                                    <small class="text-danger"  ng-show="!form.Ofcountry.$untouched  && form.Ofcountry.$viewValue.length==0">
+                                    Enter Country.
+                                </small>  
                                  </div>  
                                    <div class="form-group col-md-6 col-xm-6 col-sm-6">
                                    <label for="" class="labletext">Address Type</label>
@@ -243,9 +275,9 @@
                                     <option value="Rented">Rented</option> 
                                   </select>
                                 </div>
+                                  </div> 
 
-                            
-
+                                
                                
                             </div>
 

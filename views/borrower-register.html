@@ -26,79 +26,85 @@
                     <h1 class="m0_hading">Borrower Registration</h1>                    
                 </div>
 
-                <div class="borrower-register-input">
+                <div class="borrower-register-input form1">
                     <div class="register-inputs"> 
                         <form name="form" class="lableBoldForm ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-minlength ng-valid-pattern ng-dirty ng-valid-parse" novalidate="">
                             <div class="row">
         <div class="form-group col-md-12">
-             <small class="text-danger"  ng-show="!form.First_Name.$untouched && form.First_Name.$viewValue.length==0">
-                                Enter First Name.
-                                </small>
+            
                 <input type="text" placeholder="First Name" name="First_Name" letters-only="" maxlength="40"
                         ng-trim="false" required=""
                         class="ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-touched form-control"
                         ng-model="formData.first_name" label="First Name">
+                         <small class="text-danger"  ng-show="!form.First_Name.$untouched && form.First_Name.$viewValue.length==0">
+                                Enter First Name.
+                                </small>
         </div>
 
         <div class="form-group col-md-12">
 
-            <small class="text-danger"  ng-show="!form.Email.$untouched && form.Email.$viewValue.length==0">
-                                Enter Email ID.
-                                </small>
-            <small class="text-danger"  ng-show="!form.Email.$untouched && form.Email.$error.pattern  ">
-                                Invalid Email ID.
-                                </small>
-                <input type="text" placeholder="Email ID" ng-model="formData.email" id="reg_email" name="Email" ng-blur="validateEntryOfDetail($event)"
+         
+                <input type="text" placeholder="Email-ID (optional)" ng-model="formData.email" id="reg_email" name="Email" ng-blur="validateEntryOfDetail($event)"
                   ng-pattern="/^[a-zA-Z0-9]+[a-zA-Z0-9._]+@[a-zA-Z0-9_-]+\.[a-zA-Z]{2,5}$/"
                   class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern"
                   autocomplete="off">
+                     <small class="text-danger"  ng-show="!form.Email.$untouched && form.Email.$viewValue.length==0">
+                                Enter Email-ID.
+                                </small>
+            <small class="text-danger"  ng-show="!form.Email.$untouched && form.Email.$error.pattern  ">
+                                Invalid Email-ID.
+                                </small>
         </div>
         <div class="form-group col-md-12">
-<small class="text-danger"  ng-show="!form.Mobile_No.$untouched && form.Mobile_No.$viewValue.length==0">
-                                Enter Mobile No.
-                                </small>
+
                 <input type="text" name="Mobile_No" placeholder="Mobile No." required="" minlength="10" only-numbers
                         
                         class="form-control ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
                         maxlength="10" ng-model="formData.mobile">
-                        <a class="otp strong ng-binding ng-scope" ng-click="sendOtp()" ng-if="formData.mobile.length==10" ng-bind="show_verify ? 'Resend OTP' : 'Verify'">Verify</a>
+                        <small class="text-danger"  ng-show="!form.Mobile_No.$untouched && form.Mobile_No.$viewValue.length==0">
+                                Enter Mobile No.
+                                </small>
+                        <a class="otp strong ng-binding ng-scope itext_right" ng-click="sendOtp()" ng-if="formData.mobile.length==10" ng-bind="show_verify ? 'Resend OTP' : 'Verify'">Verify</a>
         </div>
         <!--  -->
         <div class="form-group col-md-12 " ng-show="show_verify">
-            <small class="text-danger"  ng-show="!form.OTP_Verification.$untouched && form.OTP_Verification.$viewValue.length==0">
-                                Enter OTP.
-                                </small>
+          
                 <input type="text" placeholder="OTP" minlength="6" maxlength="6" name="OTP_Verification"
                         ng-required="formData.mobile"
                         class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required"
                         ng-model="formData.otp">
+                          <small class="text-danger"  ng-show="!form.OTP_Verification.$untouched && form.OTP_Verification.$viewValue.length==0">
+                                Enter OTP.
+                                </small>
                 <span class="tick_set" ng-show=" form.OTP_Verification.$viewValue.length==6"></span>
         </div>
         <div class="clearfix"></div>
 
         <div class="form-group col-md-12">
 
-          <small class="text-danger"  ng-show="!form.pan_card.$untouched && form.pan_card.$viewValue.length==0">
+         
+                <input type="text" placeholder="PAN Number" required=""  minlength="10" maxlength="10" name="pan_card" ng-pattern="/[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}/" class="form-control ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" ng-model="formData.pan_no">
+                 <small class="text-danger"  ng-show="!form.pan_card.$untouched && form.pan_card.$viewValue.length==0">
                                 Enter PAN number.
                                 </small>
          <small class="text-danger"  ng-show="form.pan_card.$error.pattern && form.pan_card.$viewValue.length==10 ">
                                 Invalid PAN number.
                                 </small>
-                <input type="text" placeholder="PAN" required=""  minlength="10" maxlength="10" name="pan_card" ng-pattern="/[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}/" class="form-control ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength" ng-model="formData.pan_no">
                 <span class="tick_set" ng-show="!form.pan_card.$error.pattern && form.pan_card.$viewValue.length==10 "></span>
         </div>
 
         <div class="form-group col-md-12">
 
-            <small class="text-danger"  ng-show="!form.dob.$untouched && form.dob.$viewValue.length==0">
-                                Enter DOB.
-                                </small>
-             <input type="text" ng-readonly="expression" placeholder="DOB" required="" name="dob" class="form-control ng-empty ng-invalid ng-invalid-required" uib-datepicker-popup ng-model="formData.dob" is-open="popup2.opened" datepicker-options="dateOptions" ng-click="openCalendar()" ng-required="true" close-text="Close" />
+            
+             <input type="text" ng-readonly="expression" placeholder="D.O.B." required="" name="dob" class="form-control ng-empty ng-invalid ng-invalid-required" uib-datepicker-popup ng-model="formData.dob" is-open="popup2.opened" datepicker-options="dateOptions" ng-click="openCalendar()" ng-required="true" close-text="Close" />
 
                 <span class="datetimeicon" ng-click="openCalendar()"><img src="images/datetime.png"></span>
                 <div id="DataBox" ng-if="DatePicker">
                    <div uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></div>
                 </div>
+                <small class="text-danger"  ng-show="!form.dob.$untouched && form.dob.$viewValue.length==0">
+                                Enter D.O.B.
+                                </small>
 
          <!--         <p class="input-group">
           
@@ -110,28 +116,31 @@
         </div>
 
         <div class="form-group col-md-12">
-             <small class="text-danger"  ng-show="!form.referral_id.$untouched && form.referral_id.$viewValue.length==0">
-                                Enter Referral ID.
-                                </small>
-                <input type="text" placeholder="Referral ID" name="referral_id" ng-model="formData.partner_referral_id"
+            
+                <input type="text" placeholder="Referral ID (optional)" name="referral_id" ng-model="formData.partner_referral_id"
                         ng-change="vm.changeReferral()" class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-empty ng-invalid ng-invalid-required">
                 <span class="tick_set" ng-show=" form.referral_id.$viewValue.length>1"></span>
+                 <small class="text-danger"  ng-show="!form.referral_id.$untouched && form.referral_id.$viewValue.length==0">
+                                Enter Referral ID.
+                                </small>
         </div>
 
         <div class="form-group col-md-12">
-            <small class="text-danger" ng-show="!form.pincode.$untouched && form.pincode.$viewValue.length==0">
-                                Enter Pincode.
-                                </small>
+          
                 <input type="text" only-numbers  placeholder="Pincode"
                         class="form-control  ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength"
                         name="pincode" with-string="true" autocomplete="new-password" required="" maxlength="7" ng-pattern="/^[1-9][0-9]{4,6}$/"
                         ng-blur="vm.getPincodeByStateFn(formData.personal_detail.pincode)"
                         ng-model="formData.personal_detail.pincode">
                 <span class="tick_set" ng-show=" form.pincode.$viewValue.length>5"></span>
+                  <small class="text-danger" ng-show="!form.pincode.$untouched && form.pincode.$viewValue.length==0">
+                                Enter Pin code.
+                                </small>
         </div>
 
         <div class="form-group col-md-12">
                 <select class="form-control" id="sel1" ng-model="formData.House_Type" placeholder="House Type">
+                        <option value="null">House Type</option>
                         <option value="Owned">Owned</option>
                         <option value="Rented">Rented</option>
                 </select>
@@ -156,17 +165,17 @@
                 </label>
         </div>
         <div class="form-group col-md-12 input_radiobtn lablerow" ng-show="formData.personal_detail.employment_type=='SALARIED'">
-                <label for=""> Mode of salary</label>
+                <label for=""> Mode of salary</label>                
+                <label for="mode_of_salary1" class="radio">
+                        <input type="radio"id="mode_of_salary1" name="mode_of_salary" ng-model="formData.personal_detail.mode_of_salary"
+                                value="CASH" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                        <span>Cash</span>
+                </label>
                 <label for="mode_of_salary" class="radio">
                         <input type="radio" ng-checked="true" id="mode_of_salary" name="mode_of_salary"
                                 ng-model="formData.personal_detail.mode_of_salary" value="CHEQUE_OR_ONLINE_TRANSFER"
                                 class="ng-pristine ng-untouched ng-valid ng-not-empty" >
                         <span>Cheque/Online Transfer</span>
-                </label>
-                <label for="mode_of_salary1" class="radio">
-                        <input type="radio"id="mode_of_salary1" name="mode_of_salary" ng-model="formData.personal_detail.mode_of_salary"
-                                value="CASH" class="ng-pristine ng-untouched ng-valid ng-not-empty">
-                        <span>Cash</span>
                 </label>
                 
         </div>
@@ -208,8 +217,12 @@
                 <input type="text" placeholder="Monthly Income" nks-only-number="" required="" decimal-upto="2"
                         maxlength="10" allow-negative="false" allow-decimal="true"
                         class="form-control  ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-dirty ng-valid-parse"
-                        name="net_monthly_income" ng-model="formData.personal_detail.net_monthly_income"
+                        name="net_monthly_income" ng-model="formData.Monthly_Income"
                         placeholder="Net Monthly Income">
+
+                        <small class="text-danger" ng-show="!form.net_monthly_income.$untouched && form.net_monthly_income.$viewValue.length==0">
+                                Enter Monthly Income.
+                                </small>
 
         </div>
         <div class="form-group terms col-md-12 col-sm-12 col-xs-12 input_radiobtn">
@@ -219,8 +232,8 @@
                                 ng-model="formData.is_terms_of_privacy_policy" placeholder="Partner ID"
                                 class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required">
                         <span>I agree to the <a target="_blank" class="strong" href="">Terms of
-                                        Use</a> of the company,<a target="_blank" class="strong" href="">Privacy
-                                        Policy</a>and<a target="_blank" class="strong" href="">Borrower Agreement
+                                        Use</a> of the company, <a target="_blank" class="strong" href="">Privacy
+                                        Policy</a> and <a target="_blank" class="strong" href=""> Borrower Registeration Agreement
                                 </a><sup class="text-danger">*</sup>
                                 <msg ng-show="form['I_agree_to_the_Terms_of_use_of_the_company,_Privacy_Policy_and_Borrower_Agreement'].show_error"
                                         class="text-danger ng-binding ng-hide"

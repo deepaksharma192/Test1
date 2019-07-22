@@ -11,18 +11,23 @@ app.controller("borrowerRegister2Ctrl", function ($scope,$location) {
 	    State:"",
 	    Country:""
     },
-    Details:{
-    	Employmenttype:"Salaried",
-    	Business:"Business",
+    Employmenttype:"Salaried",
+    Business:"Business",
+    Details_Salaried:{
+    	
     	FirmName:"",
     	FirmType:"FMCG 1",
     	Designation:"",
     	EmployeedSince:"",
     	OfficialEmail:"",
-    	OfficialContact:"",
-    	PAN:"",
-    	Operations:"",
-    	TurnOver:""
+    	OfficialContact:""
+    },
+    Details_Self_employed:{
+      FirmName:"",
+      FirmType:"FMCG 1",
+      PAN:"",
+      Operations:"",
+      TurnOver:""
     },
     Office:{
     	address1:"" ,
@@ -42,41 +47,51 @@ app.controller("borrowerRegister2Ctrl", function ($scope,$location) {
     if(d.houseType == 'Rented' && d.rent == ""){
       alert("Enter Rented.")
     }else if(!d.address.address1){
-      alert("Enter address1.")
+      alert("Enter Address.")
     }else if(!d.address.pincode){
-      alert("Enter pincode.")
+      alert("Enter Pin Code.")
     }else if(!d.address.City){
       alert("Enter City.")
     }else if(!d.address.State){
       alert("Enter State.")
     }else if(!d.address.Country){
       alert("Enter Country.")
-    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.FirmName){
-	      alert("Enter FirmName.")
-	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.Designation){
+    }else if(d.Employmenttype == "Salaried" && !d.Details_Salaried.FirmName){
+	      alert("Enter Firm Name.")
+	    }else if(d.Employmenttype == "Salaried" && !d.Details_Salaried.Designation){
 	      alert("Enter Designation.")
-	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.EmployeedSince){
-	      alert("Enter EmployeedSince.")
-	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.OfficialEmail){
-	      alert("Enter OfficialEmail.")
-	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.OfficialContact){
-	      alert("Enter OfficialContact.")
-	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.PAN){
-	      alert("Enter PAN.")
-	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.Operations){
-	      alert("Enter Operations.")
-	    }else if(d.Details.Employmenttype != "Salaried" && !d.Details.TurnOver){
-	      alert("Enter TurnOver.")
-	    }else if(!d.Office.address1){
-      alert("Enter Office address1.")
-    }else if(!d.Office.pincode){
-      alert("Enter Office pincode.")
-    }else if(!d.Office.City){
-      alert("Enter Office City.")
-    }else if(!d.Office.State){
-      alert("Enter Office State.")
-    }else if(!d.Office.Country){
-      alert("Enter Office Country.")
+	    }else if(d.Employmenttype == "Salaried" && !d.Details_Salaried.EmployeedSince){
+	      alert("Enter Employeed Since.")
+	    }
+     //  else if(d.Employmenttype == "Salaried" && !d.Details_Salaried.OfficialEmail){
+	    //   alert("Enter Official E-mail ID.")
+	    // }
+      else if(d.Employmenttype == "Salaried" && !d.Details_Salaried.OfficialContact){
+	      alert("Enter valid Mobile No.")
+	    }
+
+      else if(d.Employmenttype == "Self-employed" && !d.Details_Self_employed.FirmName){
+        alert("Enter Firm Name.")
+      }
+      else if(d.Employmenttype == "Self-employed" && !d.Details_Self_employed.PAN){
+	      alert("Enter PAN number.")
+	    }else if(d.Employmenttype == "Self-employed" && !d.Details_Self_employed.Operations){
+	      alert("Enter Years Of Operations.")
+	    }else if(d.Employmenttype == "Self-employed" && !d.Details_Self_employed.TurnOver){
+	      alert("Enter Turn Over.")
+	    }
+
+
+      else if(d.Employmenttype == "Self-employed" && !d.Office.address1){
+      alert("Enter Address.")
+    }else if(d.Employmenttype == "Self-employed" && !d.Office.pincode){
+      alert("Enter Pin Code.")
+    }else if(d.Employmenttype == "Self-employed" && !d.Office.City){
+      alert("Enter City.")
+    }else if(d.Employmenttype == "Self-employed" && !d.Office.State){
+      alert("Enter State.")
+    }else if(d.Employmenttype == "Self-employed" && !d.Office.Country){
+      alert("Enter Country.")
     }else{
       console.log($scope.formData)
       alert("done")

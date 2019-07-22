@@ -7,7 +7,7 @@ app.controller("borrowerRegister1Ctrl", function ($scope,$location) {
     Loan_Affordable:"",
     Gender:"Male",
     Marital:"Single",
-    Spouse_Working:"No",
+    Spouse_Working:"Yes",
     Spouse_Monthly_Income:"",
     Working_Parents:"Yes",
     Parent_Monthly_Income:"",
@@ -28,8 +28,8 @@ app.controller("borrowerRegister1Ctrl", function ($scope,$location) {
       alert("Enter Loan_Affordable EMI.")
     }else if(d.Marital == "Married" && d.Spouse_Working == "Yes" && d.Spouse_Monthly_Income ==""){
       alert("Enter Spouse_Monthly_Income.")
-    }else if(d.Working_Parents == "Yes" && d.Parent_Monthly_Income ==""){
-      alert("Enter Parent_Monthly_Income.")
+    }else if(d.Marital != "Married" && d.Working_Parents == "Yes" && d.Parent_Monthly_Income ==""){
+      alert("Enter Parent Monthly Income.")
     }else if(d.other_source == "Yes" && d.other_Income_Amount ==""){
       alert("Enter other_Income_Amount.")
     }else if(!d.Education){

@@ -6,25 +6,27 @@
                     <h1 class="m1_hading">Borrower Registration</h1>                    
                 </div>
                 <div class="borrower-register-input">
-                    <div class="register-inputs"> 
+                    <div class="register-inputs form2"> 
                         <form name="form" class="lableBoldForm ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-minlength ng-valid-pattern ng-dirty ng-valid-parse" novalidate="">
 
                             <div class="row">
                                 <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
 
 
-                                  <label for="LoanAmount" class="labletext">Loan Amount <small class="text-danger"  ng-show="!form.LoanAmount.$untouched  && form.LoanAmount.$viewValue.length==0">
-                                Ender Loan Amount.
-                                </small></label>
+                                  <label for="LoanAmount" class="labletext">Loan Amount </label>
 
                                     <input type="text" only-numbers placeholder="Rs. 75,000" name="LoanAmount" id="LoanAmount"  maxlength="40"   class="ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-untouched ng-touched form-control" ng-model="formData.Loan_amount" label="First Name">
+                                    <small class="text-danger"  ng-show="!form.LoanAmount.$untouched  && form.LoanAmount.$viewValue.length==0">
+                                Enter Loan Amount.
+                                </small>
                                 </div>
 
                                  <div class="form-group col-md-6 col-xm-6 col-sm-6"> 
-                                   <label for="LoanTenure" class="labletext">Loan Tenure <small class="text-danger"  ng-show="!form.LoanTenure.$untouched  && form.LoanTenure.$viewValue.length==0">
-                                Ender Loan Tenure.
-                                </small></label>
+                                   <label for="LoanTenure" class="labletext">Loan Tenure </label>
                                     <input type="text" only-numbers placeholder="12 Months" ng-model="formData.Loan_tenure" id="LoanTenure" name="LoanTenure"  class="form-control ng-pristine ng-untouched ng-valid ng-empty ng-valid-pattern">
+                                    <small class="text-danger"  ng-show="!form.LoanTenure.$untouched  && form.LoanTenure.$viewValue.length==0">
+                                Enter Loan Tenure.
+                                </small>
                                  </div>  
                                  <div class="form-group col-md-6 col-xm-6 col-sm-6">
                                    <label for="" class="labletext">Purpose of Loan</label>
@@ -34,10 +36,11 @@
                                   </select>
                                 </div> 
                                 <div class="form-group col-md-6 col-xm-6 col-sm-6 " > 
-                                  <label for="" class="labletext">Affordable EMI <small class="text-danger"  ng-show="!form.Loan_Affordable.$untouched  && form.Loan_Affordable.$viewValue.length==0">
-                                Ender Affordable EMI.
-                                </small></label>
+                                  <label for="" class="labletext">Affordable EMI </label>
                                     <input type="text" only-numbers placeholder="Rs. 5,000"  name="Loan_Affordable" id="Loan_Affordable"  class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required" ng-model="formData.Loan_Affordable">
+                                    <small class="text-danger"  ng-show="!form.Loan_Affordable.$untouched  && form.Loan_Affordable.$viewValue.length==0">
+                                      Enter Affordable EMI.
+                                </small>
                                  </div>
                                 <div class="clearfix"></div> 
                              
@@ -45,12 +48,12 @@
 
                               <div class="form-group col-md-6 col-xm-6 col-sm-6 input_radiobtn lablerow">
                                   <label for="">Gender</label>
-                                       <label for="Gender" class="radio">
-                                    <input type="radio" name="Gender" id="Gender"  ng-model="formData.Gender" value="Male" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
+                                       <label for="GEnter" class="radio">
+                                    <input type="radio" name="GEnter" id="GEnter"  ng-model="formData.Gender" value="Male" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
                                     <span>Male</span>
                                     </label>
-                                     <label for="Gender1" class="radio">
-                                    <input type="radio"  name="Gender" id="Gender1"  ng-model="formData.Gender" value="Female" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
+                                     <label for="GEnter1" class="radio">
+                                    <input type="radio"  name="GEnter1" id="GEnter1"  ng-model="formData.Gender" value="Female" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required">
                                     <span>Female</span>
                                     </label>
                              </div>
@@ -78,14 +81,15 @@
                                     <span>No</span>
                                     </label>
                              </div>
-  <div class="form-group col-md-6 col-xm-6 col-sm-6 " ng-show="formData.Marital == 'Married' && formData.Spouse_Working =='Yes'" > 
-                                  <label for="Spouse_Monthly_Income" class="labletext">Spouse’s Monthly Income <small class="text-danger"  ng-show="!form.Spouse_Monthly_Income.$untouched  && form.Spouse_Monthly_Income.$viewValue.length==0">
-                                Ender Spouse’s Monthly Income.
-                                </small></label>
+                      <div class="form-group col-md-6 col-xm-6 col-sm-6 " ng-show="formData.Marital == 'Married' && formData.Spouse_Working =='Yes'" > 
+                                  <label for="Spouse_Monthly_Income" class="labletext">Spouse’s Monthly Income </label>
                                     <input type="text" only-numbers placeholder="e.g. Rs. 23,000" id="Spouse_Monthly_Income" name="Spouse_Monthly_Income" ng-model="formData.Spouse_Monthly_Income" class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required" >
+                                    <small class="text-danger"  ng-show="!form.Spouse_Monthly_Income.$untouched  && form.Spouse_Monthly_Income.$viewValue.length==0">
+                                Enter Spouse’s Monthly Income.
+                                </small>
                                  </div>
 
-                             <div class="form-group col-md-6 col-xm-6 col-sm-6 input_radiobtn lablerow">
+                             <div class="form-group col-md-6 col-xm-6 col-sm-6 input_radiobtn lablerow" ng-show="formData.Marital == 'Single'">
                                   <label for="">Working Parents?</label>
                                        <label for="Working_Parents" class="radio">
                                     <input type="radio" name="Working_Parents" id="Working_Parents" ng-model="formData.Working_Parents" value="Yes" class="ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required" checked="checked">
@@ -99,11 +103,12 @@
 
                            
 
-                                  <div ng-show="formData.Working_Parents == 'Yes' " class="form-group col-md-6 col-xm-6 col-sm-6 " > 
-                                  <label for="" class="labletext">Parent’s Monthly Income <small class="text-danger"  ng-show="!form.Parent_Monthly_Income.$untouched  && form.Parent_Monthly_Income.$viewValue.length==0">
-                                Ender Parent’s Monthly Income.
-                                </small></label>
+                                  <div ng-show="formData.Working_Parents == 'Yes' && formData.Marital != 'Married' " class="form-group col-md-6 col-xm-6 col-sm-6 " > 
+                                  <label for="" class="labletext">Parent’s Monthly Income</label>
                                     <input type="text" only-numbers placeholder="e.g. Rs. 15,000"  name="Parent_Monthly_Income" id="Parent_Monthly_Income" ng-model="formData.Parent_Monthly_Income"  class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required" >
+                                     <small class="text-danger"  ng-show="!form.Parent_Monthly_Income.$untouched  && form.Parent_Monthly_Income.$viewValue.length==0">
+                                Enter Parent’s Monthly Income.
+                                </small>
                                  </div>
                                 <div class="clearfix"></div> 
 
@@ -122,10 +127,11 @@
 
 
                              <div class="form-group col-md-6 col-xm-6 col-sm-6 " ng-show="formData.other_source == 'Yes' " > 
-                                  <label for="" class="labletext">Income Amount <small class="text-danger"  ng-show="!form.Income_Amount.$untouched  && form.Income_Amount.$viewValue.length==0">
-                                Ender Amount.
-                                </small></label>
+                                  <label for="" class="labletext">Income Amount </label>
                                     <input type="text" only-numbers placeholder="e.g. Rs. 10,000"  name="Income_Amount" ng-model="formData.other_Income_Amount" class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required" >
+                                    <small class="text-danger"  ng-show="!form.Income_Amount.$untouched  && form.Income_Amount.$viewValue.length==0">
+                                    Enter Income Amount.
+                                </small>
                                  </div>
                                  <div class="clearfix"></div>  
 
@@ -138,10 +144,11 @@
                                 </div>
 
                                  <div class="form-group col-md-6 col-xm-6 col-sm-6 " ng-show="formData.Marital == 'Married' "> 
-                                  <label for="" class="labletext">No. of Kids <small class="text-danger"  ng-show="!form.Kids.$untouched  && form.Kids.$viewValue.length==0">
-                                Ender No.
-                                </small></label>
-                                    <input type="text" only-numbers placeholder="eg. 2" name="Kids" ng-model="formData.Kids" class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required" >
+                                  <label for="" class="labletext">No. of Kids </label>
+                                    <input type="text" only-numbers placeholder="eg. 2" name="Kids" maxlength="2" ng-model="formData.Kids" class="form-control ng-empty ng-valid ng-valid-minlength ng-valid-maxlength ng-valid-required" >
+                                    <small class="text-danger"  ng-show="!form.Kids.$untouched  && form.Kids.$viewValue.length==0">
+                                Enter No. of Kids.
+                                </small>
                                  </div>
                               
 

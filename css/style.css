@@ -1,6 +1,26 @@
 .hader_top{
   position: relative;
 }
+
+ @font-face {
+    font-family: 'Segoe UI';
+    src: local('Segoe UI'), local('SegoeUI'),
+        url('../fonts/hinted-SegoeUI.woff2') format('woff2'),
+        url('../fonts/hinted-SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/MyriadPro-Bold.woff2') format('woff2'),
+        url('../fonts/MyriadPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
 /*.btn {
 
     background: url('images/datetime.png');
@@ -14,6 +34,11 @@
     background-repeat: no-repeat;
 
 }*/
+body{
+  font-family: 'Segoe UI';
+ }
+
+
 #DataBox{
   position: absolute;
 z-index: 999;
@@ -46,6 +71,7 @@ right: 6px;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
+   font-family: 'Myriad Pro';
 } 
 .services p{
   color: #404041;
@@ -59,7 +85,7 @@ right: 6px;
 }
 .register-box .m0_hading {
     background: #ff5000;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 58px;
     color: #fff;
     font-weight: bold;
@@ -97,6 +123,7 @@ right: 6px;
  .register-box .input_radiobtn .checkbox,
  .register-box .input_radiobtn .radio{
   margin: 0;
+  padding-left: 25px;
  } 
  .lablerow{
   display: flex;
@@ -283,12 +310,13 @@ padding-left: 20px;
   font-weight: normal;
  }
 .register-box_2 .form-group{
-  margin-bottom: 25px;
+  margin-bottom:35px;
 
 }
  .register-box_2 .input_radiobtn .checkbox,
  .register-box_2 .input_radiobtn .radio{
   margin: 0;
+  padding-left: 25px;
  } 
 .register-box_2 .form-control.selectarrow {
     background: url(../images/arrow.png) no-repeat;
@@ -367,4 +395,28 @@ select::-ms-expand {
 
 .btnn:active {
   background-color: #3e8e41;
+}
 
+.itext_right{
+      position: absolute;
+    top: 6px;
+    right: 24px;
+    text-align: right;
+}
+.otp.itext_right{
+  cursor: pointer;
+}
+
+.form1 .small, .form1 small{
+      font-size: 65%;
+    background: #e3e3e4;
+    display: block;
+    padding: 2px;
+}
+.form2.register-inputs .small, .form2.register-inputs small{
+position: absolute;
+left: 26px;
+}
+.uib-daypicker.ng-scope table tr:last-child{ 
+  display: none;
+}
