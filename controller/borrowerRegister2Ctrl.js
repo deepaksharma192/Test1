@@ -45,7 +45,7 @@ app.controller("borrowerRegister2Ctrl", function ($scope,$location) {
    	var check2=false;
     var d = $scope.formData;
     if(d.houseType == 'Rented' && d.rent == ""){
-      alert("Enter Rented.")
+      alert("Enter paying name.")
     }else if(!d.address.address1){
       alert("Enter Address.")
     }else if(!d.address.pincode){
