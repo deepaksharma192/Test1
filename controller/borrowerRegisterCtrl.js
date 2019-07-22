@@ -65,9 +65,10 @@ app.controller("borrowerRegisterCtrl", function ($scope,$location) {
   	$scope.DatePicker = true;
 };
   $scope.sendOtp = function () {
-        if ($scope.formData && $scope.formData.mobile) {
+    alert(222)
+       // if ($scope.formData && $scope.formData.mobile) {
    			 $scope.show_verify = true;
-        }
+       // }
     };
  
   

@@ -16,6 +16,15 @@ app.config(function($routeProvider) {
         templateUrl : "views/borrower-register2.html",
         controller : "borrowerRegister2Ctrl"
     })
+    
+    .when("/Congratulations", {
+        templateUrl : "views/Congratulations.html",
+        controller : "CongratulationsCtrl"
+    })
+    .when("/notify", {
+        templateUrl : "views/notify.html",
+        controller : "notifyCtrl"
+    })
     .when("/borrower-register", {
         templateUrl :"views/borrower-register.html",
         controller : "borrowerRegisterCtrl"

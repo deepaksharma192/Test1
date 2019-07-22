@@ -38,7 +38,13 @@ app.controller("borrowerRegister1Ctrl", function ($scope,$location) {
        alert("Enter Kids.")
     }else{
       console.log($scope.formData)
-      $location.path('/borrower-register2/')
+       var x = Math.floor((Math.random() * 2) + 1);
+       if(x == 1){
+        $location.path('Congratulations/')
+       }else{
+        $location.path('notify/')
+       }
+      
     }
   }
 
